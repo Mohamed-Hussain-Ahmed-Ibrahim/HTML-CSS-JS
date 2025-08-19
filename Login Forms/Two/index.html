@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets\css\index.css">
+  <title>Secure Login</title>
+</head>
+
+<body>
+  <div class="login">
+    <div class="header">
+      <h2 class="active" id="signin-tab"> sign in </h2>
+      <h2 class="nonactive" id="signup-tab"> sign up </h2>
+    </div>
+    
+    <form id="signin-form">
+      <div class="input-container">
+        <input type="text" class="text" name="username" required>
+        <span>username</span>
+        <i class="fas fa-user"></i>
+      </div>
+      
+      <div class="input-container">
+        <input type="password" class="text" name="password" id="password" required>
+        <span>password</span>
+        <i class="fas fa-lock"></i>
+        <i class="fas fa-eye-slash toggle-password" onclick="togglePassword()"></i>
+      </div>
+      
+      <div class="options">
+        <div class="remember-me">
+          <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+          <label for="checkbox-1-1">Keep me Signed in</label>
+        </div>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+      
+      <button type="submit" class="signin">Sign In</button>
+      
+      <div class="social-login">
+        <p>or sign in with</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </form>
+    
+    <form id="signup-form" class="hidden">
+      <div class="input-container">
+        <input type="text" class="text" name="fullname" required>
+        <span>full name</span>
+        <i class="fas fa-user"></i>
+      </div>
+      
+      <div class="input-container">
+        <input type="email" class="text" name="email" required>
+        <span>email</span>
+        <i class="fas fa-envelope"></i>
+      </div>
+      
+      <div class="input-container">
+        <input type="password" class="text" name="new-password" id="new-password" required>
+        <span>password</span>
+        <i class="fas fa-lock"></i>
+        <i class="fas fa-eye-slash toggle-password" onclick="togglePassword('new-password')"></i>
+      </div>
+      
+      <div class="input-container">
+        <input type="password" class="text" name="confirm-password" required>
+        <span>confirm password</span>
+        <i class="fas fa-lock"></i>
+      </div>
+      
+      <button type="submit" class="signin">Sign Up</button>
+      
+      <div class="terms">
+        <input type="checkbox" id="terms" class="custom-checkbox" required />
+        <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+      </div>
+    </form>
+  </div>
+
+  <script src="assets\js\index.js"></script>
+</body>
+
+</html>

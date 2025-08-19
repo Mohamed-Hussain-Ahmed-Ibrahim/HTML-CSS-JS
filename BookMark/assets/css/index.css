@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7ecde;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.headr{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.mark-lightOrange {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #fec260; 
+    height: 35%; /* Initially covers some of height of the text height */
+    bottom: 5px;
+    z-index: 1;
+    transition: height 0.3s ease, transform 0.3s ease; 
+    transform-origin: bottom;
+    animation: slidefromleft 1s ease-in-out;
+}
+
+.headr:hover .mark-lightOrange {
+    height: 65%; /* covers the text height */
+}
+.text{
+    position: relative;
+    z-index: 2; /* Ensures text is above the highlight */
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+    font-weight: 500;
+    color: #352e28;
+    font-family: "Pacifico", cursive;
+    font-style: normal;
+    line-height: 1; /* Ensures no extra space below text */
+    animation: slidefromright 1s ease-in-out;
+}
+.dottedLine {
+    border-top: 2px dotted #000; /* Customize as needed */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw; 
+    margin-top: 50px;
+}
+.text2 {
+  font-family: "Righteous", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 20px;
+  color: #45a55a;
+  text-align: center;
+}
+.bookmark {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 2px;
+}
+.customBorder:focus{
+    border-color: #13fb45;
+    box-shadow: 0 0 0 0.25rem rgba(25, 228, 69, 0.368);
+}
+.inputIcon{
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+}
+.name{
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sbtn{
+    padding-top: 25px;
+    font-size: 16px;
+}
+.sbtn button{
+    background-color: #bb4120;
+}
+.dottedLine2{
+    border-top: 2px dotted #000; /* Customize as needed */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw; 
+    margin-top: 25px;
+}
+#tableBody tr td{
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: slidefromleft 1s ease-in-out;
+}
+#tableBody tr td:hover{
+    color: #634cdb;
+    cursor: pointer;
+}
+@keyframes slidefromleft {
+    from {
+        transform: translateX(500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+    
+}
+@keyframes slidefromright {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+    
+}
+@keyframes slidefromleft {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+    
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="headr">
+            <div class="mark-lightOrange"></div>
+            <h1 class="text">BookMark</h1>
+        </div>
+        <div>
+            <div class="dottedLine"></div>
+            <h2 class="text2">
+                <img class="bookmark" src="assets/icons/bookmark.png" alt="bookmark"></img>
+                Bookmark your favorite sites
+                <img class="bookmark" src="assets/icons/bookmark.png" alt="bookmark"></img>
+            </h2>
+            <div class="inputs">
+                <div class="siteName d-flex">
+                    <img class="inputIcon me-2" src="assets/icons/agenda.png" alt="agenda">
+                    <h5 class="name">Site Name</h5>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control customBorder" id="siteNameInput" placeholder="siteName">
+                    <label for="siteNameInput">BookMark Name</label>
+                    <div class="invalid-feedback">Enter at least 3 letters/numbers.</div>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <div class="siteUrl d-flex">
+                    <img class="inputIcon me-2" src="assets/icons/link.png" alt="Link">
+                    <h5 class="name">Site URL</h5>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control customBorder" id="siteUrlInput" placeholder="siteUrl">
+                    <label for="siteUrlInput">Website URL</label>
+                    <div class="invalid-feedback">URL must start with http/https and end with .com , .net or .org ex: https://www.example.com</div>
+                    <div class="valid-feedback">Valid URL!</div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center sbtn">
+                <button type="submit" class="btn btn-danger px-5">Submit</button>
+            </div>
+            <div class="dottedLine2"></div>
+            <div class="container mt-4 w-100">
+                <div class="table-responsive w-100">
+                    <table class="table table-dark table-bordered table-hover text-center align-middle">
+                    <thead>
+                        <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col" style="min-width: 200px;">Website Name</th>
+                        <th scope="col">Visit</th>
+                        <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

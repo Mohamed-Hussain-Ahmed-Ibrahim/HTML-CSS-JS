@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title>Weight Converter</title>
+  </head>
+  <body>
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-gradient">
+      <div class="col-lg-5 col-md-7 col-sm-9 mx-auto">
+        <div class="converter-card shadow-lg">
+          <div class="card-header text-center py-4">
+            <h1 class="display-4 font-weight-bold text-white">
+              <i class="fas fa-weight-hanging mr-2"></i>Weight Converter
+            </h1>
+            <p class="text-light mb-0">Convert pounds to grams and kilograms</p>
+          </div>
+          
+          <div class="card-body px-5 py-4">
+            <form>
+              <div class="form-group mb-4">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white">
+                      <i class="fas fa-pound-sign"></i>
+                    </span>
+                  </div>
+                  <input type="number" 
+                         class="form-control form-control-lg" 
+                         placeholder="Enter weight in pounds..." 
+                         id="lbsInput"
+                         step="0.01"
+                         min="0">
+                  <div class="input-group-append">
+                    <span class="input-group-text bg-primary text-white">lbs</span>
+                  </div>
+                </div>
+                <small class="form-text text-muted mt-2">Enter a value to see conversions</small>
+              </div>
+            </form>
+
+            <div id="output" class="results-container">
+              <div class="result-card bg-gradient-primary">
+                <div class="result-icon">
+                  <i class="fas fa-weight"></i>
+                </div>
+                <div class="result-content">
+                  <h4>Grams</h4>
+                  <div id="gramOutput" class="result-value">0</div>
+                </div>
+              </div>
+
+              <div class="result-card bg-gradient-secondary">
+                <div class="result-icon">
+                  <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="result-content">
+                  <h4>Kilograms</h4>
+                  <div id="kilogramOutput" class="result-value">0</div>
+                </div>
+              </div>
+
+              <div class="result-card bg-gradient-tertiary">
+                <div class="result-icon">
+                  <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="result-content">
+                  <h4>Ounces</h4>
+                  <div id="ounceOutput" class="result-value">0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer text-center py-3">
+            <small class="text-light">© 2023 Weight Converter | Precision Measurement Tool</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

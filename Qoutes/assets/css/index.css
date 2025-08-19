@@ -1,0 +1,97 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.quote-word {
+    font-family: Impact;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.5s ease-out forwards;
+    font-size: 80px;
+    font-weight: 700;
+    color: #333;
+    margin-right: 10px;
+    letter-spacing: 2px;
+}
+.quote-word:nth-child(1) { animation-delay: 0.2s; }
+.quote-word:nth-child(2) { animation-delay: 0.4s; }
+.quote-word:nth-child(3) { animation-delay: 0.6s; }
+.quote-word:nth-child(4) { animation-delay: 0.8s; }
+
+.quote-text {
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    color: #000;
+    padding: 20px;
+}
+
+.quote-button {
+    background-color: #0000ff;
+    border: 2px solid #000;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.quote-button:hover {
+    background-color: #008000;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid;
+    border-color: #b7f130;
+}
+.quote-line{
+    font-family: 'Times New Roman';
+    font-size: 30px;
+    font-weight: 400;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.quote-author{
+    font-family: 'Times New Roman';
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    padding: 20px;
+    margin-right: 50px;
+    opacity: 0;
+    transform: translateY(-80px);
+    animation: slideIn2 0.5s ease-out forwards;
+}
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideIn2 {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
